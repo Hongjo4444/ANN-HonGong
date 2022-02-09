@@ -70,3 +70,5 @@ plt.plot(point,1.01*point**2-21.6*point+116.05) #구간별 직선 그리기
 plt.xlabel('length')
 plt.ylabel('weight')
 plt.show()
+print(lr.score(train_poly,train_target))
+print(lr.score(test_poly,test_target)) #여전히 테스트 세트가 약간 높음(과소적합 남아있음)>>좀 더 복잡한 모델 필요
