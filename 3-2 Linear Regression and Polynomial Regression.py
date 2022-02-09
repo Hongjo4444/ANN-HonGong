@@ -53,7 +53,7 @@ plt.plot([15,50],[15*lr.coef_+lr.intercept_,50*lr.coef_+lr.intercept_]) #15~50�
 plt.scatter(50,1241.8,marker='^')
 plt.show()
 print(lr.score(train_input,train_target)) #선형 회귀를 사용한 훈련 세트의 R^2 점수
-print(lr.score(test_input,test_target)) #선형 회귀를 사용한 테스트 세트의 R^2 점수, 테스트 세트의 점수가 너무 낮으므로 과소적합 예상
+print(lr.score(test_input,test_target)) #선형 회귀를 사용한 테스트 세트의 R^2 점수, 훈련 세트의 점수도 높지 않으므로 전체적으로 과소적합 예상
 
 train_poly=np.column_stack((train_input**2,train_input))
 test_poly=np.column_stack((test_input**2,test_input))
