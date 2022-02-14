@@ -39,7 +39,7 @@ print(lr.coef_,lr.intercept_) #로지스틱 회귀 계수 확인(특성이 5개�
 
 decisions=lr.decision_function(train_bream_smelt[:5]) #처음 5개 샘플의 z값 출력
 print(decisions)
-from scipy.special import expit #z값을 시그노이드 함수에 넣어서 확률값 출력
+from scipy.special import expit #양성값에 대한 z값을 시그노이드 함수에 넣어서 확률값 출력
 print(expit(decisions))
 
 #로지스틱 회귀 다중 분류(여러개의 클래스가 있는 경우), 다중분류는 소프트맥스 함수 이용해 확률 출력
