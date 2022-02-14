@@ -45,7 +45,7 @@ print(expit(decisions))
 #로지스틱 회귀 다중 분류(여러개의 클래스가 있는 경우), 다중분류는 소프트맥스 함수 이용해 확률 출력
 lr=LogisticRegression(C=20,max_iter=1000)
 #C값 조정으로 노름 규제 조절(기본값은 1, C 커지면 규제 약해짐(복잡해짐), C 작아지면 규제 강해짐), max_iter(반복횟수)를 늘려서 반복횟수 오류 방지
-lr.fit(train_scaled,train_target)
+lr.fit(train_scaled,train_target) #로지스틱 회귀 클래스로 다중 분류 모델 훈련
 print(lr.score(train_scaled,train_target)) #훈련 정확도
 print(lr.score(test_scaled,test_target)) #테스트 정확도
 proba=lr.predict_proba(test_scaled[:5]) #테스트 세트의 처음 5개 샘플에 대한 확률 출력
