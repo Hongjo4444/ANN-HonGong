@@ -26,7 +26,7 @@ print(lr.score(train_scaled,train_target))
 print(lr.score(test_scaled,test_target)) #점수가 높지 않음 >> 화이트 와인 골라내는게 어려움, 훈련 세트와 테스트 세트 점수 모두 낮음 >> 과소적합
 print(lr.coef_,lr.intercept_) #계수(가중치,기울기),절편 출력
 
-from sklearn.tree import DecisionTreeClassifier #결정 트리(질문을 통해 예측값을 만들어가는 것), 회귀 모델은 Regressor
+from sklearn.tree import DecisionTreeClassifier #결정 트리(질문을 통해 예측값을 만들어가는 것, 다른사람에게 설명하기 쉬움), 회귀 모델은 Regressor
 dt=DecisionTreeClassifier(random_state=42)
 dt.fit(train_scaled,train_target)
 dt.fit(train_scaled,train_target)
